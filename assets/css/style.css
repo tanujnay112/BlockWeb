@@ -718,7 +718,7 @@ a,
 }
 
 .btn.btn-b {
-  background: #111111;
+  background: rgba(17, 17, 17, 0.5);
   color: #fff;
 }
 
