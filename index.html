@@ -281,20 +281,24 @@
               </div>
             </div>
             <div class="row multi-columns-row">
-              <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6 col-md-3 col-lg-3 simpleCart_shelfItem">
                 <div class="shop-item">
-                  <div class="shop-item-image"><img src="assets/images/shop/product-7.jpg" alt="Accessories Pack"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
+                  <div class="shop-item-image">
+                    <img class="item_thumb" src="assets/images/shop/product-7.jpg"/>
+                    <div class="shop-item-detail"><a href="javascript:;" class="btn btn-round btn-b item_add">
+                    <span class="icon-basket">Add To Cart</span></a></div>
                   </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>£9.00
+                  <h4 class="shop-item-title font-alt"><a class="item_name" href="#">Accessories Pack</a></h4>
+                  <h4 class="item_price">£9.00</h4>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6 col-md-3 col-lg-3 simpleCart_shelfItem">
                 <div class="shop-item">
-                  <div class="shop-item-image"><img src="assets/images/shop/product-8.jpg" alt="Men’s Casual Pack"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
+                  <div class="shop-item-image">
+                    <img class="item_thumb" src="assets/images/shop/product-8.jpg" alt="Men’s Casual Pack"/>
+                    <div class="shop-item-detail"><a href="javascript:;" class="btn btn-round btn-b item_add"><span class="icon-basket">Add To Cart</span></a></div>
                   </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Men’s Casual Pack</a></h4>£12.00
+                  <h4 class="shop-item-title font-alt"><a class="item_name" href="#">Men’s Casual Pack</a></h4><h4 class="item_price">£12.00</h4>
                 </div>
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
@@ -447,6 +451,7 @@
     JavaScripts
     =============================================
     -->
+    <script src="assets/js/simpleCart.js"></script>
     <script src="assets/lib/jquery/dist/jquery.js"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/lib/wow/dist/wow.js"></script>

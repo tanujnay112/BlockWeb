@@ -367,8 +367,8 @@
             <div class="row">
               <div class="col-sm-12">
                 <table class="table table-striped table-border checkout-table">
-                  <tbody>
-                    <tr>
+                  <tbody id="tablo">
+                    <!--<tr>
                       <th class="hidden-xs">Item</th>
                       <th>Description</th>
                       <th class="hidden-xs">Price</th>
@@ -382,7 +382,7 @@
                         <h5 class="product-title font-alt">Accessories Pack</h5>
                       </td>
                       <td class="hidden-xs">
-                        <h5 class="product-title font-alt">£20.00</h5>
+                        <h5 class="product-title font-alt simpleCart_quantity">£20.00</h5>
                       </td>
                       <td>
                         <input class="form-control" type="number" name="" value="1" max="50" min="1"/>
@@ -407,7 +407,7 @@
                         <h5 class="product-title font-alt">£20.00</h5>
                       </td>
                       <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
-                    </tr>
+                    </tr>-->
                   </tbody>
                 </table>
               </div>
@@ -431,14 +431,33 @@
             </div>
             <hr class="divider-w">
             <div class="row mt-70">
-              <div class="col-sm-5 col-sm-offset-7">
+              <div class="col-sm-5 col-sm-offset-0">
+                <h4 class="font-alt mb-0">Enter Your Information</h4>
+                <hr class="divider-w mt-10 mb-20">
+                <form class="form" role="form">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="First Name"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Last Name"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Email ID"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Phone number (optional)"/>
+                  </div>
+                  <textarea class="form-control" rows="7" placeholder="Any questions for us?"></textarea>
+                </form>
+              </div>
+              <div class="col-sm-5 col-sm-offset-2">
                 <div class="shop-Cart-totalbox">
                   <h4 class="font-alt">Cart Totals</h4>
                   <table class="table table-striped table-border checkout-table">
                     <tbody>
                       <tr>
                         <th>Cart Subtotal :</th>
-                        <td>£40.00</td>
+                        <td class="simpleCart_total">£40.00</td>
                       </tr>
                       <tr>
                         <th>Shipping Total :</th>
@@ -446,7 +465,7 @@
                       </tr>
                       <tr class="shop-Cart-totalprice">
                         <th>Total :</th>
-                        <td>£42.00</td>
+                        <td class="simpleCart_total">£42.00</td>
                       </tr>
                     </tbody>
                   </table>
@@ -536,6 +555,8 @@
     JavaScripts
     =============================================
     -->
+    <script src="assets/js/simpleCart.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/lib/jquery/dist/jquery.js"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/lib/wow/dist/wow.js"></script>
