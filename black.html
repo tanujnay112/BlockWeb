@@ -127,16 +127,17 @@
       </nav>
       <div class="main">
         <section class="module">
-          <div class="container">
+          <div class="container simpleCart_shelfItem">
             <div class="row">
-              <div class="col-sm-6 mb-sm-40"><a class="gallery" href="assets/images/shop/black.png"><img src="assets/images/shop/black.png" alt="Single Product Image"/></a>
+              <div class="col-sm-6 mb-sm-40"><a class="gallery" href="assets/images/shop/black.png">
+              <img class="item_thumb" src="assets/images/shop/black.png" alt="Single Product Image"/></a>
                 <ul class="product-gallery">
                 </ul>
               </div>
               <div class="col-sm-6">
                 <div class="row">
                   <div class="col-sm-12">
-                    <h1 class="product-title font-alt">Charcoal Pink Block</h1>
+                    <h1 class="item_name product-title font-alt">Charcoal Pink Block</h1>
                   </div>
                 </div>
                 <div class="row mb-20">
@@ -145,7 +146,7 @@
                 </div>
                 <div class="row mb-20">
                   <div class="col-sm-12">
-                    <div class="price font-alt"><span class="amount">$21.99</span></div>
+                    <div class="price font-alt"><span class="amount">$<span class="item_price">21.99</span></span></div>
                   </div>
                 </div>
                 <div class="row mb-20">
@@ -157,9 +158,9 @@
                 </div>
                 <div class="row mb-20">
                   <div class="col-sm-4 mb-sm-20">
-                    <input class="form-control input-lg" type="number" name="" value="1" max="40" min="1" required="required"/>
+                    <input class="item_Quantity form-control input-lg" type="number" name="" value="1" max="40" min="1" required="required"/>
                   </div>
-                  <div class="col-sm-8"><a class="btn btn-lg btn-block btn-round btn-b" href="#">Add To Wish list</a></div>
+                  <div class="col-sm-8"><a class="item_add btn btn-lg btn-block btn-round btn-b" href="#">Add To Wish list</a></div>
 
                 </div>
 
@@ -242,6 +243,7 @@
     <script src="assets/lib/smoothscroll.js"></script>
     <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="assets/js/simpleCart.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
