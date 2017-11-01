@@ -432,8 +432,11 @@
             <hr class="divider-w">
             <div class="row mt-70">
               <div class="col-sm-5 col-sm-offset-0">
-                <h4 class="font-alt mb-0">Enter Your Information</h4>
+                <h4 class="font-alt mb-0">Enter Some Contact Information</h4>
                 <hr class="divider-w mt-10 mb-20">
+                <div id="closer" class="hidden alert alert-danger" role="alert">
+                  <button class="hidden close" type="button" data-dismiss="alert" aria-hidden="true">×</button><i class="fa fa-coffee" onclick="hide()"></i><strong>Alert!</strong>
+                </div>
                 <form class="form" role="form">
                   <div class="form-group">
                     <input class="form-control" id="fname" type="text" placeholder="First Name"/>
@@ -449,27 +452,28 @@
                   </div>
                   <textarea class="form-control" id="questions" rows="7" placeholder="Any questions for us?"></textarea>
                 </form>
+
               </div>
               <div class="col-sm-5 col-sm-offset-2">
                 <div class="shop-Cart-totalbox">
-                  <h4 class="font-alt">Cart Totals</h4>
+                  <h4 class="font-alt">Wishlist Totals</h4>
                   <table class="table table-striped table-border checkout-table">
                     <tbody>
-                      <tr>
+                      <!--<tr>
                         <th>Cart Subtotal :</th>
                         <td class="simpleCart_total">£40.00</td>
                       </tr>
                       <tr>
                         <th>Shipping Total :</th>
                         <td>£2.00</td>
-                      </tr>
+                      </tr>-->
                       <tr class="shop-Cart-totalprice">
                         <th>Total :</th>
                         <td class="simpleCart_total">£42.00</td>
                       </tr>
                     </tbody>
                   </table>
-                  <button id="checkout" class="btn btn-lg btn-block btn-round btn-d" type="submit">Proceed to Checkout</button>
+                  <button id="checkout" class="btn btn-lg btn-block btn-round btn-d" type="submit">Submit Wishlist</button>
                 </div>
               </div>
             </div>

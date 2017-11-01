@@ -25,7 +25,7 @@ function updateTable() {
 		row = tbody.insertRow(0);
 		cell = row.insertCell(0);
 		cell.colSpan = "6";
-		cell.innerHTML = "<div class='well well-lg'><strong>Wow!</strong> "+
+		cell.innerHTML = "<div class='well well-lg'><strong>Wow there!</strong> "+
 			"You've got nothing in your cart. Go reserve some Block gear!</div>"
 		return;
 	}
@@ -77,31 +77,81 @@ function removeRow(i){
 	simpleCart.save();
 }
 
-
-
-
-
-var url = 'https://script.google.com/macros/s/AKfycbxkrJfqiHNgbPHcrP6sfIgwq6jKa6rMe_Xa2gO2uq0JcP50XX0/exec'
+var url = 'https://script.google.com/a/andrew.cmu.edu/macros/s/AKfycbzJxB1-wU3rLcR7UQMPAMSu0PbN-DHhcn1P365DWurLoeWx0w/exec'
 
 $('#checkout').on('click', function(e) {
   e.preventDefault();
+  e.stopPropagation();
+  if(validateForm() == 0)
+  	return;
   var jqxhr = $.ajax({
     url: url,
     method: "GET",
     dataType: "json",
-    data: getInformation(),
-    success: function(){alert("DONE");}
+    data: {"stuff": getInformation()},
+    success: function(){simpleCart.empty();window.location.replace('confirmation.html');}
   });
+})
+
+$(".close").on('click', function(e){
+	e.preventDefault();
+	hide();
 })
 
 function getInformation(){
 	var dict = new Object();
-	dict.FName = $("#fname")[0].value;
-	dict.LName = $("#lname")[0].value;
+	dict.Fname = $("#fname")[0].value;
+	dict.Lname = $("#lname")[0].value;
 	dict.Email = $("#email")[0].value;
 	dict.Phone = $("#phone")[0].value;
 	dict.Questions = $("#questions")[0].value;
 	dict.Cart = JSON.parse(localStorage.simpleCart_items);
-	console.log(JSON.stringify(dict));
 	return JSON.stringify(dict);
+}
+
+function validateForm(){
+	var str = $("#fname")[0].value;
+	if (simpleCart.items().length == 0) {
+		showAlert("You can't give us an empty wishlist!");
+		return 0;
+	}
+	if(str.length == 0){
+		showAlert("You forgot to give us your first name!")
+		return 0;
+	}
+	str = $("#lname")[0].value;
+	if(str.length == 0){
+		showAlert("You forgot to give us your last name!")
+		return 0;
+	}
+	str = $("#email")[0].value;
+	if(str.length == 0){
+		showAlert("You forgot to give us your email!");
+		return 0;
+	}
+	if(!ValidateEmail(str)){
+		return 0;
+	}
+	return 1;
+}
+
+function ValidateEmail(mail)   
+{  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))  
+  {  
+    return (true)  
+  }  
+    showAlert("You have entered an invalid email address!")  
+    return (false)  
+}  
+
+function hide(){
+	$("#closer").addClass("hidden");
+}
+
+function showAlert(text){
+	$("#closer")[0].innerHTML = "<button class='hidden close' onclick='hide()' type='button' data-dismiss='alert' aria-hidden='true'>×"
+	+"</button><i class='fa fa-coffee' onclick='hide()'></i><strong>Wow there!</strong> "
+	+ text;	
+	$("#closer").removeClass("hidden");
 }
