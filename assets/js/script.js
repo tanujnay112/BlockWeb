@@ -2,6 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
   updateTable();
 });
 
+$(document).ready (function(){
+            $("#success-alert").hide();
+            $(".item_add").click(function showAlert() {
+                $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+               $("#success-alert").slideUp(500);
+                });   
+            });
+ });
+
 simpleCart({
         checkout: {
           type: "PayPal",
