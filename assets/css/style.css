@@ -10,7 +10,7 @@ html {
 body {
   background: #fff;
   font: 400 12px/1.8 "Open Sans", sans-serif;
-  color: #666;
+  color:  gray;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -22,6 +22,28 @@ img {
 iframe {
   border: 0;
 }
+
+#kek{
+    height:80%;
+    width:20px/*maintain aspect ratio*/
+    max-width:300px;
+}
+#example1 {
+    background-image: url('../images/shop/rishav3.png'),url('../images/shop/prithvi.jpg');
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain,contain;
+    opacity: 0.5;
+}
+
+#example2 {
+    background-image: url('../images/shop/tanuj2.png'),url('../images/shop/darshan.png');
+    background-position: left, right;
+    background-repeat: no-repeat,no-repeat;
+    background-size: contain,contain;
+}
+
+
 
 .align-center {
   text-align: center;
@@ -1115,6 +1137,9 @@ Hero Slider
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  opacity: 0.7;
+  background: black;
+
 }
 
 /*
@@ -1381,6 +1406,7 @@ General Styles - Owlcarousel
 .titan-title-size-1 {
   letter-spacing: 4px;
   font-size: 15px;
+
 }
 
 .titan-title-size-2 {
@@ -1388,17 +1414,20 @@ General Styles - Owlcarousel
   letter-spacing: 3px;
   font-size: 18px;
   opacity: .8;
+
 }
 
 .titan-title-size-3 {
   letter-spacing: 16px;
   font-size: 46px;
+
 }
 
 .titan-title-size-4 {
   letter-spacing: 24px;
   font-weight: 400;
   font-size: 48px;
+
 }
 
 /* Agency Page Header */
