@@ -29,7 +29,7 @@ iframe {
     max-width:300px;
 }
 #example1 {
-    background-image: url('../images/shop/rishav3.png'),url('../images/shop/prithvi.jpg');
+    background-image: url('../images/shop/rishav3.png'),url('../images/shop/prithvi.png');
     background-position: left bottom, right bottom;
     background-repeat: no-repeat, no-repeat;
     background-size: contain,contain;
