@@ -436,18 +436,18 @@
                 <hr class="divider-w mt-10 mb-20">
                 <form class="form" role="form">
                   <div class="form-group">
-                    <input class="form-control" type="text" placeholder="First Name"/>
+                    <input class="form-control" id="fname" type="text" placeholder="First Name"/>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Last Name"/>
+                    <input class="form-control" id="lname" type="text" placeholder="Last Name"/>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Email ID"/>
+                    <input class="form-control" id="email" type="text" placeholder="Email ID"/>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Phone number (optional)"/>
+                    <input class="form-control" id="phone" type="text" placeholder="Phone number (optional)"/>
                   </div>
-                  <textarea class="form-control" rows="7" placeholder="Any questions for us?"></textarea>
+                  <textarea class="form-control" id="questions" rows="7" placeholder="Any questions for us?"></textarea>
                 </form>
               </div>
               <div class="col-sm-5 col-sm-offset-2">
@@ -469,7 +469,7 @@
                       </tr>
                     </tbody>
                   </table>
-                  <button href="javascript:;" class="btn btn-lg btn-block btn-round btn-d simpleCart_checkout" type="submit">Proceed to Checkout</button>
+                  <button id="checkout" class="btn btn-lg btn-block btn-round btn-d" type="submit">Proceed to Checkout</button>
                 </div>
               </div>
             </div>
@@ -555,8 +555,7 @@
     JavaScripts
     =============================================
     -->
-    <script src="assets/js/simpleCart.js"></script>
-    <script src="assets/js/script.js"></script>
+
     <script src="assets/lib/jquery/dist/jquery.js"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/lib/wow/dist/wow.js"></script>
@@ -568,6 +567,8 @@
     <script src="assets/lib/smoothscroll.js"></script>
     <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="assets/js/simpleCart.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

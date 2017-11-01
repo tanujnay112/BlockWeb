@@ -76,3 +76,32 @@ function removeRow(i){
 	simpleCart.update();
 	simpleCart.save();
 }
+
+
+
+
+
+var url = 'https://script.google.com/macros/s/AKfycbxkrJfqiHNgbPHcrP6sfIgwq6jKa6rMe_Xa2gO2uq0JcP50XX0/exec'
+
+$('#checkout').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: getInformation(),
+    success: function(){alert("DONE");}
+  });
+})
+
+function getInformation(){
+	var dict = new Object();
+	dict.FName = $("#fname")[0].value;
+	dict.LName = $("#lname")[0].value;
+	dict.Email = $("#email")[0].value;
+	dict.Phone = $("#phone")[0].value;
+	dict.Questions = $("#questions")[0].value;
+	dict.Cart = JSON.parse(localStorage.simpleCart_items);
+	console.log(JSON.stringify(dict));
+	return JSON.stringify(dict);
+}
