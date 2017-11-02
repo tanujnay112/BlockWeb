@@ -75,62 +75,10 @@
             
                 <li class="dropdown"><a class="" href="#" data-toggle="dropdown">Contact Us</a>
                 </li>
-                <!--li.dropdown.navbar-cart-->
-                <!--    a.dropdown-toggle(href='#', data-toggle='dropdown')-->
-                <!--        span.icon-basket-->
-                <!--        |-->
-                <!--        span.cart-item-number 2-->
-                <!--    ul.dropdown-menu.cart-list(role='menu')-->
-                <!--        li-->
-                <!--            .navbar-cart-item.clearfix-->
-                <!--                .navbar-cart-img-->
-                <!--                    a(href='#')-->
-                <!--                        img(src='assets/images/shop/product-9.jpg', alt='')-->
-                <!--                .navbar-cart-title-->
-                <!--                    a(href='#') Short striped sweater-->
-                <!--                    |-->
-                <!--                    span.cart-amount 2 &times; $119.00-->
-                <!--                    br-->
-                <!--                    |-->
-                <!--                    strong.cart-amount $238.00-->
-                <!--        li-->
-                <!--            .navbar-cart-item.clearfix-->
-                <!--                .navbar-cart-img-->
-                <!--                    a(href='#')-->
-                <!--                        img(src='assets/images/shop/product-10.jpg', alt='')-->
-                <!--                .navbar-cart-title-->
-                <!--                    a(href='#') Colored jewel rings-->
-                <!--                    |-->
-                <!--                    span.cart-amount 2 &times; $119.00-->
-                <!--                    br-->
-                <!--                    |-->
-                <!--                    strong.cart-amount $238.00-->
-                <!--        li-->
-                <!--            .clearfix-->
-                <!--                .cart-sub-totle-->
-                <!--                    strong Total: $476.00-->
-                <!--        li-->
-                <!--            .clearfix-->
-                <!--                a.btn.btn-block.btn-round.btn-font-w(type='submit') Checkout-->
-                <!--li.dropdown-->
-                <!--    a.dropdown-toggle(href='#', data-toggle='dropdown') Search-->
-                <!--    ul.dropdown-menu(role='menu')-->
-                <!--        li-->
-                <!--            .dropdown-search-->
-                <!--                form(role='form')-->
-                <!--                    input.form-control(type='text', placeholder='Search...')-->
-                <!--                    |-->
-                <!--                    button.search-btn(type='submit')-->
-                <!--                        i.fa.fa-search-->
               </ul>
             </div>
           </div>
         </nav>
-        <div class="affix-top alert alert-success" id="success-alert">
-          <button type="button" class="close" data-dismiss="alert">x</button>
-          <strong>Success! </strong>
-          Product has been added to your wishlist.
-        </div>
       <section class="home-section home home-full-height" id="home">
         <div class="hero-slider">
           <ul class="slides">
@@ -372,16 +320,8 @@
         var name = $(".shop-item").eq(i).find(".item_name")[0].innerHTML;
         var price = $(".shop-item").eq(i).find(".item_price")[0].innerHTML;
         var thumb = $(".shop-item").eq(i).find(".item_thumb")[0].src;
-        /*var url = "jabang.html";
-        var form = $('<form action="' + url + '" method="post">' +
-      ' <input type="text" name="name" value="' + name + '" />' +
-      ' <input type="text" name="price" value="' + price + '" />' +
-      ' <input type="text" name="thumb" value="' + thumb + '" />' +
-        '</form>');
-      $('body').append(form);
-      form.submit();*/
-      localStorage.cookie = JSON.stringify({"name":name, "price":price,"thumb":thumb});
-      window.location.href = 'jabang.html';
+        localStorage.cookie = JSON.stringify({"name":name, "price":price,"thumb":thumb});
+        window.location.href = 'jabang.html';
     }
     </script>
   </body>
