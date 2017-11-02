@@ -46,12 +46,14 @@ function updateTable() {
 	cell = row.insertCell(1);
 	cell.innerHTML = "Description";
 	cell = row.insertCell(2);
-	cell.innerHTML = "Price";
+	cell.innerHTML = "Size";
 	cell = row.insertCell(3);
-	cell.innerHTML = "Quantity";
+	cell.innerHTML = "Price";
 	cell = row.insertCell(4);
-	cell.innerHTML = "Total";
+	cell.innerHTML = "Quantity";
 	cell = row.insertCell(5);
+	cell.innerHTML = "Total";
+	cell = row.insertCell(6);
 	cell.innerHTML = "Remove";
 	for(var i = 0; i < simpleCart.items().length; i++) {
 		row = tbody.insertRow(i+1);
@@ -61,13 +63,15 @@ function updateTable() {
 		cell = row.insertCell(1);
 		cell.innerHTML = "<h5 class='product-title font-alt'>"+stuff.get("name")+"</h5>";
 		cell = row.insertCell(2);
-		cell.innerHTML = "<h5 class='product-title font-alt'>$"+stuff.get("price").toFixed(2)+"</h5>";
+		cell.innerHTML = "<h5 class='product-title font-alt'>"+stuff.get("size")+"</h5>";
 		cell = row.insertCell(3);
+		cell.innerHTML = "<h5 class='product-title font-alt'>$"+stuff.get("price").toFixed(2)+"</h5>";
+		cell = row.insertCell(4);
 		cell.innerHTML = "<input class='form-control' type='number' name='' onchange='javascript:updateQuantity("+i.toString()+")'"+ 
 			"value="+stuff.get("quantity")+" max='50' min='1' required='required'>";
-		cell = row.insertCell(4);
-		cell.innerHTML = "<h5 class='product-title font-alt'>$"+(stuff.get("price")*stuff.get("quantity")).toFixed(2)+"</h5>";
 		cell = row.insertCell(5);
+		cell.innerHTML = "<h5 class='product-title font-alt'>$"+(stuff.get("price")*stuff.get("quantity")).toFixed(2)+"</h5>";
+		cell = row.insertCell(6);
 		cell.innerHTML = "<a href='javascript:removeRow("+i.toString()+")' title='Remove'><i class='fa fa-times'></i></a>";
 	}
 }

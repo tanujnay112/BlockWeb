@@ -1927,6 +1927,7 @@ simpleCart({
       attr: 'thumb', label: false},
         {attr: "name", label: "Product"},
         {attr: "quantity", label: "Qty"},
+        {attr: "size", label: "Size"},
         {attr: "price", label: "Price", view: 'currency'},
         {view: "remove", text: "Remove", label: false}
         ]
