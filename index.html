@@ -163,11 +163,13 @@
               <div class="col-sm-6 col-md-3 col-lg-3 simpleCart_shelfItem">
                 <div class="shop-item">
                   <div class="shop-item-image">
-                    <img class="item_thumb" src="assets/images/shop/jabang2.png"/>
+                    <img href="javascript:individual(0);" class="item_thumb" src="assets/images/shop/jabang2.png"/>
                     <div class="shop-item-detail"><a href="javascript:;" class="btn btn-round btn-b item_add">
                     <span class=""> <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add To Wish List</span></a></div>
                   </div>
-                  <h4 class="shop-item-title font-alt"><a class="item_name" href="jabang.html">JaBang Original</a></h4>
+
+                  <h4 class="shop-item-title font-alt"><a class="item_name" href="javascript:individual(0);">
+                  JaBang Original</a></h4>
                   <h4 class="item_price" style = "color:#4c4c4c;">$26.99</h4>
                 </div>
               </div>
@@ -178,7 +180,7 @@
                     <div class="shop-item-detail"><a href="javascript:;" class="btn btn-round btn-b item_add"><span class="">
                      <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add To Wish List</span></a></div>
                   </div>
-                  <h4 class="shop-item-title font-alt"><a class="item_name" href="babyblue.html">Baby Blue Block</a></h4><h4 class="item_price">$21.99</h4>
+                  <h4 class="shop-item-title font-alt"><a class="item_name" href="javascript:individual(1);">Baby Blue Block</a></h4><h4 class="item_price">$21.99</h4>
                 </div>
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3 simpleCart_shelfItem">
@@ -187,7 +189,7 @@
                     <div class="shop-item-detail"><a class="btn btn-round btn-b item_add"><span class="">
                     <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add to Wish List</span></a></div>
                   </div>
-                  <h4 class="shop-item-title font-alt"><a class="item_name" href="black.html">Charcoal Pink Block</a></h4><h4 class="item_price">$21.99</h4>
+                  <h4 class="shop-item-title font-alt"><a class="item_name" href="javascript:individual(2);">Charcoal Pink Block</a></h4><h4 class="item_price">$21.99</h4>
                 </div>
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3 simpleCart_shelfItem">
@@ -196,9 +198,16 @@
                     <div class="shop-item-detail"><a href="javascript:;" class="btn btn-round btn-b item_add"><span class="">
                     <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add to Wish List</span></a></div>
                   </div>
-                  <h4 class="shop-item-title font-alt"><a class="item_name" href="abstract.html">Block Official</a></h4><h4 class="item_price">$21.99</h4>
+                  <h4 class="shop-item-title font-alt"><a class="item_name" href="javascript:individual(3);">Block Official</a></h4><h4 class="item_price">$21.99</h4>
                 </div>
               </div>
+            </div>
+            <div class="row" id="success-alert">
+              <div class="alert alert-success">
+          <!--button type="button" class="close" data-dismiss="alert">x</button>-->
+          <strong>Success! </strong>
+          Product has been added to your wishlist.
+        </div>
             </div>
           </div>
         </section>
@@ -352,5 +361,23 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/simpleCart.js"></script>
+    <script src="assets/js/alerter.js"></script>
+    <script>
+      function individual(i){
+        var name = $(".shop-item").eq(i).find(".item_name")[0].innerHTML;
+        var price = $(".shop-item").eq(i).find(".item_price")[0].innerHTML;
+        var thumb = $(".shop-item").eq(i).find(".item_thumb")[0].src;
+        /*var url = "jabang.html";
+        var form = $('<form action="' + url + '" method="post">' +
+      ' <input type="text" name="name" value="' + name + '" />' +
+      ' <input type="text" name="price" value="' + price + '" />' +
+      ' <input type="text" name="thumb" value="' + thumb + '" />' +
+        '</form>');
+      $('body').append(form);
+      form.submit();*/
+      localStorage.cookie = JSON.stringify({"name":name, "price":price,"thumb":thumb});
+      window.location.href = 'jabang.html';
+    }
+    </script>
   </body>
 </html>

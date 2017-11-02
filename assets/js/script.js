@@ -49,16 +49,16 @@ function updateTable() {
 		cell = row.insertCell(0);
 		cell.innerHTML = "<img src='"+stuff.get("thumb")+"'"+"/>";
 		cell = row.insertCell(1);
-		cell.innerHTML = "<h5 class='product-title font-alt'>"+stuff.get("name")+"</h5>"
+		cell.innerHTML = "<h5 class='product-title font-alt'>"+stuff.get("name")+"</h5>";
 		cell = row.insertCell(2);
-		cell.innerHTML = "<h5 class='product-title font-alt'>$"+stuff.get("price").toFixed(2)+"</h5>"
+		cell.innerHTML = "<h5 class='product-title font-alt'>$"+stuff.get("price").toFixed(2)+"</h5>";
 		cell = row.insertCell(3);
 		cell.innerHTML = "<input class='form-control' type='number' name='' onchange='javascript:updateQuantity("+i.toString()+")'"+ 
-			"value="+stuff.get("quantity")+" max='50' min='1'>"
+			"value="+stuff.get("quantity")+" max='50' min='1'>";
 		cell = row.insertCell(4);
-		cell.innerHTML = "<h5 class='product-title font-alt'>$"+(stuff.get("price")*stuff.get("quantity")).toFixed(2)+"</h5>"
+		cell.innerHTML = "<h5 class='product-title font-alt'>$"+(stuff.get("price")*stuff.get("quantity")).toFixed(2)+"</h5>";
 		cell = row.insertCell(5);
-		cell.innerHTML = "<a href='javascript:removeRow("+i.toString()+")' title='Remove'><i class='fa fa-times'></i></a>"
+		cell.innerHTML = "<a href='javascript:removeRow("+i.toString()+")' title='Remove'><i class='fa fa-times'></i></a>";
 	}
 }
 
@@ -71,8 +71,18 @@ function updateQuantity(i){
 
 function removeRow(i){
 	var tbody = document.getElementById("tablo");
+	/*for(i = 1;i<simpleCart.items().length+1;i++){
+		if(simpleCart.items()[i-1].get("name")==name){
+			tbody.deleteRow(i);
+			(simpleCart.items())[i-1].remove();
+			break;
+		}
+	}*/
+	for(j=i+1;j<simpleCart.items().length;j++){
+		tbody.children[j+1].children[5].innerHTML = "<a href='javascript:removeRow("+(j-1).toString()+")' title='Remove'><i class='fa fa-times'></i></a>";
+	}
 	tbody.deleteRow(i+1);
-	(simpleCart.items())[i].remove();
+	simpleCart.items()[i].remove();
 	simpleCart.update();
 	simpleCart.save();
 }
