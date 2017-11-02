@@ -2952,19 +2952,19 @@ Google map
 }
 
 #meme1 {
-    background-image: url('../images/shop/rishav3.jpg');
+    background-image: url('../images/shop/r.jpg');
   }
 #meme2 {
-    background-image: url('../images/shop/prithvi.jpg');
+    background-image: url('../images/shop/p.jpg');
   }
 
 @media (min-width: 680px){
 #meme1 {
-    background-image: url('../images/shop/rish x prith.jpg');
+    background-image: url('../images/shop/rp.jpg');
   }
 
 #meme2 {
-    background-image: url('../images/shop/tanuj x darshan.jpg');
+    background-image: url('../images/shop/td.jpg');
   }
 
 
