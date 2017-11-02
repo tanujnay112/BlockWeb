@@ -28,13 +28,7 @@ iframe {
     width:20px/*maintain aspect ratio*/
     max-width:300px;
 }
-#example1 {
-    background-image: url('../images/shop/rishav3.png'),url('../images/shop/prithvi.png');
-    background-position: left bottom, right bottom;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain,contain;
-    opacity: 0.5;
-}
+
 
 #example2 {
     background-image: url('../images/shop/tanuj2.png'),url('../images/shop/darshan.png');
@@ -2953,4 +2947,26 @@ Google map
   .works-grid-5 .work-item {
     width: 100%;
   }
+
+
+}
+
+#meme1 {
+    background-image: url('../images/shop/rishav3.png');
+  }
+#meme2 {
+    background-image: url('../images/shop/prithvi.png');
+  }
+
+@media (min-width: 480px){
+#meme1 {
+    background-image: url('../images/shop/rish x prith.png');
+  }
+
+#meme2 {
+    background-image: url('../images/shop/tanuj x darshan.png');
+  }
+
+
+
 }
