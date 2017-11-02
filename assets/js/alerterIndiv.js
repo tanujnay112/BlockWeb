@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
         	case "jabang original":
         		text = "The merch that started it all. Classic Jabang pullover long sleeve with hood."
         		break;
-        	case "baby blue rock":
+        	case "baby blue block":
         		text = "Winter's Baby Blue long sleeve."
         		break;
-        	case "charcoal pink rock":
+        	case "charcoal pink block":
         		text = "Winter's Charcoal and Gold."
         		break;
         	case "block official":
