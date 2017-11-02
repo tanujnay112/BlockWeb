@@ -30,6 +30,7 @@ simpleCart({
 function updateTable() {
 	var tbody = document.getElementById("tablo");
 	var row;
+	tbody.innerHTML = "";
 	if(simpleCart.items().length == 0) {
 		row = tbody.insertRow(0);
 		cell = row.insertCell(0);
@@ -63,7 +64,7 @@ function updateTable() {
 		cell.innerHTML = "<h5 class='product-title font-alt'>$"+stuff.get("price").toFixed(2)+"</h5>";
 		cell = row.insertCell(3);
 		cell.innerHTML = "<input class='form-control' type='number' name='' onchange='javascript:updateQuantity("+i.toString()+")'"+ 
-			"value="+stuff.get("quantity")+" max='50' min='1'>";
+			"value="+stuff.get("quantity")+" max='50' min='1' required='required'>";
 		cell = row.insertCell(4);
 		cell.innerHTML = "<h5 class='product-title font-alt'>$"+(stuff.get("price")*stuff.get("quantity")).toFixed(2)+"</h5>";
 		cell = row.insertCell(5);
@@ -94,9 +95,10 @@ function removeRow(i){
 	simpleCart.items()[i].remove();
 	simpleCart.update();
 	simpleCart.save();
+	updateTable();
 }
 
-var url = 'https://script.google.com/a/andrew.cmu.edu/macros/s/AKfycbzJxB1-wU3rLcR7UQMPAMSu0PbN-DHhcn1P365DWurLoeWx0w/exec'
+var url = 'https://script.google.com/macros/s/AKfycbyML1L6YK6Mr8ksSR2Ygb02le2YYTuXtHopTlKoos9g72c-TLo/exec'
 
 $('#checkout').on('click', function(e) {
   e.preventDefault();
