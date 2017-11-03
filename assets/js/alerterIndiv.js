@@ -8,22 +8,25 @@ document.addEventListener("DOMContentLoaded", function() {
         $(".item_thumb")[0].src = obj.thumb;
         $(".item_price")[0].innerHTML = obj.price.split('$')[1];
         var text;
+        var desc;
         switch(obj.name.toLowerCase().trim()){
         	case "jabang original":
-        		text = "The merch that started it all. Classic Jabang pullover long sleeve with hood."
+        		text = "The merch that started it all. Classic Jabang pullover long sleeve with hood.";
+        		desc = "Pronounced like the “Djib” in Djibouti and the “ang” in gang, this is Block’s flagship offering that started it all.";
         		break;
         	case "baby blue block":
-        		text = "Winter's Baby Blue long sleeve."
+        		text = "Winter's Baby Blue long sleeve.";
         		break;
         	case "charcoal pink block":
-        		text = "Winter's Charcoal and Gold."
+        		text = "Winter's Charcoal and Gold.";
         		break;
         	case "block official":
-        		text = "Block's New Logo."
+        		text = "Block's New Logo.";
+        		desc = "";
         		break;
         }
         $(".description")[0].innerHTML = text;
-        //$("#description")[0].innerHTML = "<p style='padding-left:2%;'>"+text+"</p>";
+        $("#description")[0].innerHTML = "<p style='padding-left:2%;'>"+desc+"</p>";
       });
 $(document).ready (function(){
             $("#success-alert").hide();
