@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 $(document).ready (function(){
             $("#success-alert").hide();
+            $("#coupon").click(function processCode(){
+            		//var code = $("#coupon").
+            		var code = $("#code")[0].value;
+            		if(code == ""){return;}
+            		$("#code")[0].value = "INVALID CODE";
+            	});
             $(".item_add").click(function showAlert() {
                 $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
                $("#success-alert").slideUp(500);
