@@ -11,18 +11,20 @@ document.addEventListener("DOMContentLoaded", function() {
         var desc;
         switch(obj.name.toLowerCase().trim()){
         	case "jabang original":
-        		text = "The merch that started it all. Classic Jabang pullover long sleeve with hood.";
-        		desc = "Pronounced like the “Djib” in Djibouti and the “ang” in gang, this is Block’s flagship offering that started it all.";
+        		text = "White full sleeved hooded cotton long-sleeve pullover.";
+        		desc = "Experience the energy and enthusiasm that caused Block to be born.";
         		break;
-        	case "baby blue block":
-        		text = "Winter's Baby Blue long sleeve.";
+        	case "blockcode":
+        		text = "Long sleeved cotton black shirt.";
+        		desc = "Block x the digital age.";
         		break;
-        	case "charcoal pink block":
-        		text = "Winter's Charcoal and Gold.";
+        	case "pink block royale":
+        		text = "Charcoal and pink cotton black pullover.";
+        		desc = "The royal Block comes in pink and black.";
         		break;
         	case "block official":
-        		text = "Block's New Logo.";
-        		desc = "";
+        		text = "White on black cotton long-sleeved pullover shirt.";
+        		desc = "A unique take on the Block logo.";
         		break;
         }
         $(".description")[0].innerHTML = text;
