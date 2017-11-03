@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         		break;
         }
         $(".description")[0].innerHTML = text;
-        $("#description")[0].innerHTML = "<p></p><p style='padding-left:2%;'>"+text+"</p>";
+        //$("#description")[0].innerHTML = "<p style='padding-left:2%;'>"+text+"</p>";
       });
 $(document).ready (function(){
             $("#success-alert").hide();
