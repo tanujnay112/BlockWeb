@@ -42,7 +42,7 @@ function updateTable() {
 		cell = row.insertCell(0);
 		cell.colSpan = "6";
 		cell.innerHTML = "<div class='well well-lg'><strong>Wow there!</strong> "+
-			"You've got nothing in your cart. Go reserve some Block gear!</div>"
+			"You have nothing in your cart. Go reserve some Block gear!</div>"
 		return;
 	}
 	simpleCart.load();

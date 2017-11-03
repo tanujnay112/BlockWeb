@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         		break;
         	case "blockcode":
         		text = "Long sleeved cotton black shirt.";
-        		desc = "Block x the digital age.";
+        		desc = "Block X The Digital Age.";
         		break;
         	case "pink block royale":
         		text = "Charcoal and pink cotton black pullover.";
