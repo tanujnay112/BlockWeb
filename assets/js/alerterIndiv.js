@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+		if(!localStorage.cookie){
+			window.location.replace("index.html");
+			return;
+		}
         var obj = JSON.parse(localStorage.cookie);
         $(".item_name")[0].innerHTML = obj.name;
         $(".item_thumb")[0].src = obj.thumb;
@@ -19,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         		break;
         }
         $(".description")[0].innerHTML = text;
+        $("#description")[0].innerHTML = "<p></p><p style='padding-left:2%;'>"+text+"</p>";
       });
 $(document).ready (function(){
             $("#success-alert").hide();
