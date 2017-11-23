@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var text;
         var desc;
         switch(obj.name.toLowerCase().trim()){
-        	case "jabang original":
+        	case "hooded jabang original":
         		text = "White full sleeved hooded cotton long-sleeve pullover.";
         		desc = "Experience the energy and enthusiasm that caused Block to be born.";
         		break;
